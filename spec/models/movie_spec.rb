@@ -128,7 +128,7 @@ describe Movie do
         Movie.create(title: "Awesome Flick")
         Movie.create(title: "Even Awesomer Flick")
         
-        Movie.update_all_titles("Untitled")
+        Movie.update_all_titles(title: "Untitled")
   
         expect(Movie.where(title: "Untitled").count).to be(2)
       end
